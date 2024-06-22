@@ -1,0 +1,10 @@
+<div class="container">
+  <h1><%=@task.title%></h1>
+  <p class="border p-3 bg-secondary"><%=@task.details%></p>
+  <input type="checkbox" <%=@task.completed ? "checked": ""%>>
+  <label>This task is <%= @task.completed ? "completed" : "not completed yet" %></label><br>
+  <div class="d-felx" >
+      <%=button_to "Edit task", edit_path, method: :get, class: "btn btn-primary"%>
+      <%=button_to "Back to list", tasks_path, method: :get, class: "btn btn-primary"%>
+  </div>
+</div>
